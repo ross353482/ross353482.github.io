@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daren Ross Insurance Agency, LLC</title>
+  <style>
+    :root {
+      --brand: #0b2c6b;
+      --brand-hover: #123b8a;
+      --text: #333;
+      --muted: #555;
+      --border: #ddd;
+      --field-border: #cfd8ea;
+      --shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    header {
+      background: var(--brand);
+      color: #fff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 0.6rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f2f6fb, #e6ecf7);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin: 0.2rem 0 0;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 1rem;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn:hover {
+      background: var(--brand-hover);
+    }
+
+    .section {
+      padding: 2.5rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .image-showcase {
+      text-align: center;
+    }
+
+    .image-grid {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .serving {
+      margin-top: -0.5rem;
+      color: var(--brand);
+      font-weight: bold;
+    }
+
+    .contact-grid {
+      margin-top: 1.25rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 320px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .quote {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      background: #fff;
+    }
+
+    .quote h3 {
+      margin-top: 0;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 0.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    input, select, textarea {
+      padding: 0.7rem 0.8rem;
+      border: 1px solid var(--field-border);
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid rgba(11, 44, 107, 0.25);
+      border-color: var(--brand);
+    }
+
+    .form-note {
+      margin: 0.75rem 0 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    @media (max-width: 800px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .map iframe {
+        height: 260px;
+      }
+      .image-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 0.85rem 1rem;
+      }
+      header img {
+        height: 40px;
+      }
+      .brand-title {
+        font-size: 1.1rem;
+      }
+      nav a {
+        margin-right: 0.75rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <a href="#" style="display:flex; align-items:center; gap:1rem; text-decoration:none; color:white;">
+        <img src="ROSSInsurancC25a-A00aT07a-Z.jpg" alt="Ross Insurance Agency Logo" style="height:55px; width:auto;" />
+        <h1 class="brand-title" style="font-size:1.4rem;">Daren Ross Insurance Agency, LLC</h1>
+      </a>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#services">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Protecting What Matters Most</h2>
+    <p>Affordable and reliable insurance solutions for you, your family, and your business.</p>
+    <a href="#contact" class="btn">Get a Free Quote</a>
+  </section>
+
+  <section class="section image-showcase">
+    <h2>Who &amp; What We Protect</h2>
+    <div class="image-grid">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=70" alt="Commercial office building" />
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=70" alt="Residential homes" />
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=70" alt="Electrician at work" />
+      <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=1200&q=70" alt="Plumber working on pipes" />
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Insurance Products</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Business Insurance</h3>
+        <p>Customized coverage to protect your business, employees, and operations.</p>
+      </div>
+      <div class="card">
+        <h3>Auto Insurance</h3>
+        <p>Reliable coverage for your vehicle at competitive rates.</p>
+      </div>
+      <div class="card">
+        <h3>Home Insurance</h3>
+        <p>Protect your home and property against unexpected events.</p>
+      </div>
+      <div class="card">
+        <h3>Life Insurance</h3>
+        <p>Financial security and peace of mind for your family’s future.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+      Daren Ross Insurance Agency, LLC is committed to providing simple, transparent, and affordable insurance solutions.
+      Our mission is to help you feel secure every step of the way.
+    </p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p class="serving">Serving Austin &amp; surrounding areas</p>
+
+    <p>Email: <a href="mailto:daren@rossins.net">daren@rossins.net</a></p>
+    <p>Phone: <a href="tel:+15124593972">512-459-3972</a></p>
+    <p>Austin, TX 78750</p>
+
+    <div class="contact-grid">
+      <div class="map">
+        <iframe
+          title="Austin, TX service area map"
+          src="https://www.google.com/maps?q=Austin,+TX+78750&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="quote">
+        <h3>Request a Quote</h3>
+        <form id="quoteForm">
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="(###) ###-####" />
+          </div>
+
+          <div class="form-row">
+            <label for="type">Insurance Type</label>
+            <select id="type" name="type" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Business Insurance</option>
+              <option>Auto Insurance</option>
+              <option>Home Insurance</option>
+              <option>Life Insurance</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us what you need (property type, vehicles, coverage questions, etc.)"></textarea>
+          </div>
+
+          <button class="btn" type="submit">Send Quote Request</button>
+          <p class="form-note">Submitting opens your email app to send the request to us.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy" class="section">
+    <h2>Privacy Policy</h2>
+    <p>
+      Daren Ross Insurance Agency, LLC respects your privacy and is committed to protecting any personal information you may
+      provide through this website.
+    </p>
+    <p>
+      <strong>Information We Collect:</strong> We may collect personal information such as your name, email address, phone
+      number, and insurance-related details when you voluntarily submit them through our contact or quote request forms.
+    </p>
+    <p>
+      <strong>How We Use Information:</strong> Information collected is used solely to respond to your inquiries, provide
+      insurance information, prepare quotes, and deliver requested services. We do not sell or share your personal
+      information with third parties for marketing purposes.
+    </p>
+    <p>
+      <strong>Data Security:</strong> We take reasonable measures to protect your information; however, no method of
+      transmission over the internet is 100% secure.
+    </p>
+    <p>
+      <strong>External Links:</strong> This website may contain links to external sites. We are not responsible for the
+      privacy practices or content of those sites.
+    </p>
+    <p>
+      <strong>Contact:</strong> If you have questions regarding this Privacy Policy, please contact us at
+      <a href="mailto:daren@rossins.net">daren@rossins.net</a>.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Daren Ross Insurance Agency, LLC. All rights reserved.</p>
+    <p>Licensed &amp; Regulated Insurance Provider<br><a href="#privacy" style="color:#ccc;text-decoration:underline;font-size:0.85rem;">Privacy Policy</a></p>
+    <p style="max-width:900px;margin:0.75rem auto 0;font-size:0.85rem;line-height:1.4;color:#ccc;">
+      Insurance coverage cannot be bound or altered via this website, email, or voicemail. Coverage is subject to policy terms,
+      conditions, limitations, and exclusions. This website provides general information only and does not constitute a quote,
+      offer, or contract of insurance. Please contact Daren Ross Insurance Agency, LLC directly to confirm coverage, limits,
+      eligibility, and availability. All insurance products and services are subject to underwriting approval and carrier guidelines.
+      <br><br>
+      Daren Ross Insurance Agency, LLC is a Texas-licensed insurance agency. Insurance products are offered through licensed
+      insurance carriers authorized to do business in the State of Texas. Coverage availability, terms, and conditions may vary
+      by carrier and location. Not all products are available in all areas of Texas.
+    </p>
+  </footer>
+
+  <script>
+    /**
+     * Build a mailto URL for the quote request.
+     * Returns a string like: mailto:... ?subject=...&body=...
+     */
+    function buildQuoteMailto({ name, email, phone, type, message }) {
+      const subject = encodeURIComponent('Quote Request - ' + type);
+
+      const bodyLines = [
+        'Name: ' + name,
+        'Email: ' + email,
+        'Phone: ' + (phone || 'N/A'),
+        'Insurance Type: ' + type,
+        '',
+        'Message:',
+        message || 'N/A'
+      ];
+
+      // Use real newlines, then URL-encode safely.
+      // (The previous version accidentally contained an unescaped newline inside quotes, causing a SyntaxError.)
+      const body = encodeURIComponent(bodyLines.join('\n'));
+
+      return 'mailto:daren@rossins.net?subject=' + subject + '&body=' + body;
+    }
+
+    // Wire up the form
+    document.getElementById('quoteForm')?.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const type = document.getElementById('type').value;
+      const message = document.getElementById('message').value.trim();
+
+      window.location.href = buildQuoteMailto({ name, email, phone, type, message });
+    });
+
+    // --- Lightweight “tests” (run in the browser console) ---
+    (function runMailtoTests() {
+      const url = buildQuoteMailto({
+        name: 'Test User',
+        email: 'test@example.com',
+        phone: '',
+        type: 'Business Insurance',
+        message: 'Line 1\nLine 2'
+      });
+
+      console.assert(url.startsWith('mailto:daren@rossins.net?subject='), 'Expected mailto to start with correct base');
+      console.assert(url.includes('Quote%20Request%20-%20Business%20Insurance'), 'Expected encoded subject');
+      console.assert(url.includes('Name%3A%20Test%20User'), 'Expected encoded name');
+      console.assert(url.includes('Phone%3A%20N%2FA'), 'Expected empty phone to become N/A');
+      console.assert(url.includes('Line%201'), 'Expected message content present');
+    })();
+  </script>
+</body>
+</html>
